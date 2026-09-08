@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Главная | Node Academy</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      color: #1f2937;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 22px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 24px;
+      font-size: 16px;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #60a5fa;
+    }
+
+    main {
+      padding: 70px 60px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    .hero-text {
+      max-width: 620px;
+    }
+
+    .hero-text h1 {
+      font-size: 52px;
+      line-height: 1.1;
+      margin-bottom: 22px;
+      color: #111827;
+    }
+
+    .hero-text p {
+      font-size: 20px;
+      line-height: 1.6;
+      color: #4b5563;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #2563eb;
+      color: white;
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+    }
+
+    .hero-card {
+      width: 360px;
+      background: white;
+      padding: 32px;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    .hero-card h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+      color: #111827;
+    }
+
+    .hero-card p {
+      color: #4b5563;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1d4ed8;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .cards {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      flex: 1;
+      min-width: 260px;
+      background: white;
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+    }
+
+    .card h3 {
+      font-size: 24px;
+      margin-bottom: 14px;
+      color: #111827;
+    }
+
+    .card p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #4b5563;
+    }
+
+    footer {
+      background: #111827;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 70px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav a {
+        margin: 0 10px;
+      }
+
+      main {
+        padding: 40px 20px;
+      }
+
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-text h1 {
+        font-size: 36px;
+      }
+
+      .hero-card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">Node Academy</div>
+
+    <nav>
+      <a href="/" class="active">Главная</a>
+      <a href="/about">О нас</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <section class="hero">
+        <div class="hero-text">
+          <h1>Учебный сайт на Node.js</h1>
+
+          <p>
+            Это главная страница проекта, где мы учимся работать с HTTP-сервером,
+            маршрутами, HTML-страницами и ответами сервера.
+          </p>
+
+          <a href="/about" class="btn">Узнать о проекте</a>
+        </div>
+
+        <div class="hero-card">
+          <h2>Сейчас изучаем</h2>
+
+          <p>
+            Чистый Node.js без Express: принимаем запросы, проверяем адрес страницы
+            и отдаём нужный HTML-файл.
+          </p>
+
+          <span class="badge">Node.js + HTML + CSS</span>
+        </div>
+      </section>
+
+      <section class="cards">
+        <div class="card">
+          <h3>Маршруты</h3>
+          <p>
+            Сервер проверяет адрес запроса. Например, путь / открывает главную,
+            а путь /about открывает страницу “О нас”.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>HTML-файлы</h3>
+          <p>
+            Страницы лежат в папке src/pages и отдаются браузеру как обычные
+            HTML-документы.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Inline CSS</h3>
+          <p>
+            Пока стили находятся прямо внутри HTML в теге style. Это удобно
+            для простого учебного проекта.
+          </p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Node Academy. Учебный проект.</p>
+  </footer>
+
+</body>
+</html>

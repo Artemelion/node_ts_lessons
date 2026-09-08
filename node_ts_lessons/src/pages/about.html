@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>О нас | Node Academy</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      color: #1f2937;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 22px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 24px;
+      font-size: 16px;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #60a5fa;
+    }
+
+    main {
+      padding: 70px 60px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .page {
+      background: white;
+      padding: 50px;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+      margin-bottom: 40px;
+    }
+
+    .page h1 {
+      font-size: 48px;
+      margin-bottom: 22px;
+      color: #111827;
+    }
+
+    .page p {
+      font-size: 19px;
+      line-height: 1.7;
+      color: #4b5563;
+      margin-bottom: 18px;
+    }
+
+    .highlight {
+      color: #2563eb;
+      font-weight: bold;
+    }
+
+    .cards {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      flex: 1;
+      min-width: 260px;
+      background: white;
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+    }
+
+    .card h2 {
+      font-size: 24px;
+      margin-bottom: 14px;
+      color: #111827;
+    }
+
+    .card p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #4b5563;
+      margin-bottom: 0;
+    }
+
+    .steps {
+      background: white;
+      padding: 40px;
+      border-radius: 18px;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+    }
+
+    .steps h2 {
+      font-size: 32px;
+      margin-bottom: 24px;
+      color: #111827;
+    }
+
+    .step {
+      background: #f9fafb;
+      border-left: 5px solid #2563eb;
+      padding: 18px 22px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .step h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+      color: #111827;
+    }
+
+    .step p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #4b5563;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: #2563eb;
+      color: white;
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      background: #111827;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 70px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav a {
+        margin: 0 10px;
+      }
+
+      main {
+        padding: 40px 20px;
+      }
+
+      .page {
+        padding: 32px 24px;
+      }
+
+      .page h1 {
+        font-size: 34px;
+      }
+
+      .steps {
+        padding: 28px 22px;
+      }
+
+      .steps h2 {
+        font-size: 27px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">Node Academy</div>
+
+    <nav>
+      <a href="/">Главная</a>
+      <a href="/about" class="active">О нас</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <section class="page">
+        <h1>О проекте</h1>
+
+        <p>
+          <span class="highlight">Node Academy</span> — это учебный проект,
+          созданный для практики серверной разработки на Node.js.
+        </p>
+
+        <p>
+          Мы не используем Express, layout, шаблонизатор или отдельный CSS-файл.
+          Каждая страница является самостоятельным HTML-документом.
+        </p>
+
+        <p>
+          Главная страница открывается по адресу <strong>/</strong>,
+          а эта страница открывается по адресу <strong>/about</strong>.
+        </p>
+
+        <a href="/" class="btn">Вернуться на главную</a>
+      </section>
+
+      <section class="cards">
+        <div class="card">
+          <h2>Цель проекта</h2>
+          <p>
+            Понять, как работает сервер: как он принимает запросы,
+            обрабатывает их и отправляет ответ в браузер.
+          </p>
+        </div>
+
+        <div class="card">
+          <h2>Страницы</h2>
+          <p>
+            В проекте есть только две страницы: главная и страница “О нас”.
+            Обе страницы оформлены в одном стиле.
+          </p>
+        </div>
+
+        <div class="card">
+          <h2>Следующий шаг</h2>
+          <p>
+            Позже можно добавить отдельный CSS, обработку форм,
+            POST-запросы, JSON и переход на Express.
+          </p>
+        </div>
+      </section>
+
+      <section class="steps">
+        <h2>Как работает переход</h2>
+
+        <div class="step">
+          <h3>1. Пользователь нажимает “О нас”</h3>
+          <p>
+            Браузер переходит по ссылке <strong>/about</strong>.
+          </p>
+        </div>
+
+        <div class="step">
+          <h3>2. Сервер получает GET-запрос</h3>
+          <p>
+            Node.js проверяет <strong>req.url</strong> и понимает,
+            какую страницу нужно отправить.
+          </p>
+        </div>
+
+        <div class="step">
+          <h3>3. Сервер отдаёт HTML</h3>
+          <p>
+            Для <strong>/about</strong> сервер читает файл
+            <strong>src/pages/about.html</strong> и отправляет его браузеру.
+          </p>
+        </div>
+
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Node Academy. Учебный проект.</p>
+  </footer>
+
+</body>
+</html>
