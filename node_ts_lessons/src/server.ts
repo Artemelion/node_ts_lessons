@@ -38,6 +38,18 @@ const server = http.createServer((req, res) => {
   return;
 }
 
+    if (req.method === "GET" && req.url && path.extname(req.url) === ".jpg") {
+  const fileName = path.basename(req.url);
+  const filePath = path.join("src", "images", fileName);
+
+  const content = fs.readFileSync(filePath);
+
+  res.setHeader("Content-Type", "image/jpeg");
+  res.end(content);
+  return;
+}
+
+
   res.statusCode = 404;
   res.setHeader("Content-Type", "text/html; charset=utf-8");
   res.end("<h1>404 Not Found</h1>");
